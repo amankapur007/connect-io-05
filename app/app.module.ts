@@ -8,11 +8,13 @@ import { MyApp } from './app.component';
 
 import { ComponentModule} from '../components/component.module'
 import { LoginComponent } from '../pages/login/login.component';
+import { RegisterComponent } from '../pages/register/register.component';
 
 @NgModule({
   declarations: [
     MyApp,
     LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { LoginComponent } from '../pages/login/login.component';
   entryComponents: [
     MyApp,
     LoginComponent,
+    RegisterComponent
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
