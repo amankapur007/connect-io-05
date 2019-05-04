@@ -3,6 +3,7 @@
 ion-content{
   background-image: linear-gradient(to left top, #170235, #131544, #0e2453, #063260, #00416c);
 }
+
 .btn-right{
   float: right;
   margin-right:5px; 
