@@ -9,13 +9,16 @@ import { MyApp } from './app.component';
 import { ComponentModule} from '../components/component.module'
 import { LoginComponent } from '../pages/login/login.component';
 import { RegisterComponent } from '../pages/register/register.component';
+import { InboxComponent } from '../pages/inbox/inbox.component';
 
 @NgModule({
   declarations: [
     MyApp,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent, 
+    InboxComponent
   ],
+
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
@@ -25,7 +28,8 @@ import { RegisterComponent } from '../pages/register/register.component';
   entryComponents: [
     MyApp,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    InboxComponent
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
