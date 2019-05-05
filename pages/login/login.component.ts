@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform, Navbar, NavController, NavParams,IonicPage } from 'ionic-angular';
+import { InboxComponent } from '../inbox/inbox.component';
+import { RegisterComponent } from '../register/register.component';
 
 @IonicPage({})
 @Component({
@@ -15,10 +17,10 @@ export class LoginComponent implements OnInit {
   }
 
   navigateToPage(page:string){
-    if(page==="RegisterComponent"){
-    this.navCtrl.push(page);
-    }else if(page==="InboxComponent"){
-      this.navCtrl.setRoot(page);
+    if(page===RegisterComponent.name){
+    this.navCtrl.push(RegisterComponent);
+    }else if(page===InboxComponent.name){
+      this.navCtrl.setRoot(InboxComponent);
     }
   }
 }
