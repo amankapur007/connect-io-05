@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Platform, Navbar, NavController, NavParams,IonicPage } from 'ionic-angular';
 import { InboxComponent } from '../inbox/inbox.component';
 import { RegisterComponent } from '../register/register.component';
+import { TabsComponent } from '../tabs/tabs.component';
+
 
 @IonicPage({})
 @Component({
@@ -17,10 +19,11 @@ export class LoginComponent implements OnInit {
   }
 
   navigateToPage(page:string){
+    console.log(page)
     if(page===RegisterComponent.name){
     this.navCtrl.push(RegisterComponent);
-    }else if(page===InboxComponent.name){
-      this.navCtrl.setRoot(InboxComponent);
+    }else if(page===TabsComponent.name){
+      this.navCtrl.setRoot(TabsComponent);
     }
   }
 }

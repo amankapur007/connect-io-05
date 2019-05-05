@@ -6,30 +6,25 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MyApp } from './app.component';
 
-import { ComponentModule} from '../components/component.module'
+import { PageModule} from '../pages/page.module'
 import { LoginComponent } from '../pages/login/login.component';
 import { RegisterComponent } from '../pages/register/register.component';
 import { InboxComponent } from '../pages/inbox/inbox.component';
+import { TabsComponent } from '../pages/tabs/tabs.component';
 
 @NgModule({
   declarations: [
     MyApp,
-    LoginComponent,
-    RegisterComponent, 
-    InboxComponent
   ],
 
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ComponentModule
+    PageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LoginComponent,
-    RegisterComponent,
-    InboxComponent
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

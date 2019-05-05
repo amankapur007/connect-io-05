@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-  tab1Root:string;
-  tab2Root:string;
-  tab3Root:string;
+  tab1Root:any;
+  tab2Root:any;
+  tab3Root:any;
 
   constructor() { 
     this.tab1Root="InboxComponent";
@@ -17,6 +17,7 @@ export class TabsComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("tabs")
   }
 
 }

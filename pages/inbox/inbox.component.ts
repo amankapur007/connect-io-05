@@ -10,6 +10,8 @@ export class InboxComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+        console.log("inbox")
+
   }
 
 }

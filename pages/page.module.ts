@@ -1,23 +1,31 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { LoginComponent} from './login/login.component';
+import { IonicApp, IonicPageModule,IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { InboxComponent } from './inbox/inbox.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { ChannelComponent } from './channel/channel.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
     InboxComponent,
-    TabsComponent
+    TabsComponent,
+    ChannelComponent,
+    ProfileComponent
   ],
   imports: [
-    IonicModule.forRoot(LoginComponent)
+    IonicPageModule.forChild(LoginComponent)
   ],
-  exports: [
+  entryComponents: [
     LoginComponent,
-    RegisterComponent
-  ]
+    RegisterComponent,
+    InboxComponent,
+    TabsComponent,
+    ChannelComponent,
+    ProfileComponent
+  ],
 })
 export class PageModule {}
