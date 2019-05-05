@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {InboxComponent} from '../inbox/inbox.component';
+import {ChannelComponent} from '../channel/channel.component';
+import {ProfileComponent} from '../profile/profile.component';
 
 @Component({
   selector: 'app-tabs',
@@ -11,9 +14,9 @@ export class TabsComponent implements OnInit {
   tab3Root:any;
 
   constructor() { 
-    this.tab1Root="InboxComponent";
-    this.tab2Root="ChannelComponent";
-    this.tab3Root="ProfileComponent";
+    this.tab1Root=InboxComponent;
+    this.tab2Root=ChannelComponent;
+    this.tab3Root=ProfileComponent;
   }
 
   ngOnInit() {
