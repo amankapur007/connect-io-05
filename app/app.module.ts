@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 
 import { MyApp } from './app.component';
-
+import { CONFIG } from './app.config';
 import { PageModule} from '../pages/page.module'
 import { LoginComponent } from '../pages/login/login.component';
 import { RegisterComponent } from '../pages/register/register.component';
@@ -21,6 +21,7 @@ import { TabsComponent } from '../pages/tabs/tabs.component';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(CONFIG.FIREBASE_CONFIG),
     PageModule
   ],
   bootstrap: [IonicApp],
