@@ -21,12 +21,11 @@ export class RegisterComponent implements OnInit {
 
   async register(){
     try{
-    const result =this.afAuth.auth.createUserWithEmailAndPassword(this.account.email, this.account.password);
+    const result = await this.afAuth.auth.createUserWithEmailAndPassword(this.account.email, this.account.password);
     this.toast.create({
       message:"User is successfully registered",
       duration:3000
     }).present();
-    
   }catch(e){
     console.log(e);
     this.toast.create({
