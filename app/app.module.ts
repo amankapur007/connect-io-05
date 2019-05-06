@@ -25,6 +25,8 @@ import { TabsComponent } from '../pages/tabs/tabs.component';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(CONFIG.FIREBASE_CONFIG),
+    AngularFireAuthModule,
+    
     PageModule
   ],
   bootstrap: [IonicApp],
