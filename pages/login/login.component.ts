@@ -3,6 +3,9 @@ import { Platform, Navbar, NavController, NavParams,IonicPage } from 'ionic-angu
 import { InboxComponent } from '../inbox/inbox.component';
 import { RegisterComponent } from '../register/register.component';
 import { TabsComponent } from '../tabs/tabs.component';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
+import { Account } from '../../models/account/account.model';
 
 
 @IonicPage({})
@@ -13,9 +16,19 @@ import { TabsComponent } from '../tabs/tabs.component';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private navCtrl:NavController, private navParams:NavParams) { }
+  account = {} as Account;
+  constructor(private afAuth:AngularFireAuth,private navCtrl:NavController, private navParams:NavParams) { }
 
   ngOnInit() {
+  }
+
+  login(){
+    try{
+    const result = this.afAuth.auth.signInWithEmailAndPassword(this.account.email, this.account.password);
+    console.log(result)
+    }catch(e){
+      console.log(e.message)
+    }
   }
 
   navigateToPage(page:string){
