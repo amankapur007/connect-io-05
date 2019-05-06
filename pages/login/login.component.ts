@@ -22,12 +22,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(){
+  async login(){
     try{
-    const result = this.afAuth.auth.signInWithEmailAndPassword(this.account.email, this.account.password);
-    console.log(result)
+    const result = await this.afAuth.auth.signInWithEmailAndPassword(this.account.email, this.account.password);
+    console.log(result);
     }catch(e){
-      console.log(e.message)
+      console.log(e.message);
     }
   }
 
