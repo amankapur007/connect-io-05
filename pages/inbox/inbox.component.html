@@ -6,12 +6,12 @@
 
 <ion-content>
   <ion-list>
-  <ion-item>
+  <ion-item *ngFor="let message of messageList">
     <ion-avatar item-left>
-    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    <img [src]="message.user.avatar">
   </ion-avatar>
-    <h2>Aman Kapur</h2>
-    <p>Good morning</p>
+    <h2>{{message.user.firstName+' '+message.user.lastName}}</h2>
+    <p>{{message.lastMessage}}</p>
   </ion-item>
 </ion-list>
 </ion-content>
