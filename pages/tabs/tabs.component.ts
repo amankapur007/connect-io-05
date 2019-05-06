@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {InboxComponent} from '../inbox/inbox.component';
 import {ChannelComponent} from '../channel/channel.component';
 import {ProfileComponent} from '../profile/profile.component';
