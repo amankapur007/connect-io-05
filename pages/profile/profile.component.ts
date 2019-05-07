@@ -13,6 +13,7 @@ import data from '../../json/countrycode';
 })
 export class ProfileComponent implements OnInit {
 
+  sendOtpCheck:boolean = true;
   avatar="https://i.pinimg.com/originals/d4/42/73/d44273f7bb30d26e9e88c765665cee84.jpg"
   user = {} as User;
   countries=data.data;

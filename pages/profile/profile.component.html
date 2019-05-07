@@ -7,6 +7,7 @@
 <ion-content padding>
 	<div class="text-center">
 		<img [src]="user.avatar" class="rounded" alt="...">
+    <br><button type="button" class="btn btn-icon btn-outline-dark"><ion-icon name="create"></ion-icon></button>
   </div>
   	<form>
       <div class="input-group flex-nowrap">
@@ -42,8 +43,8 @@
   </div>
   <input type="number" class="form-control" placeholder="One Time Passcode" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="user.otp" name="otp">
 </div>
-<button type="submit" class="btn btn-primary btn-right btn-1" (click)="sendOtp(user)">Send OTP</button>
-<button type="submit" class="btn btn-primary btn-right btn-1" (click)="Verify(user)">Save</button>
+<button type="submit" class="btn btn-primary btn-right btn-1" (click)="sendOtp(user)" *ngIf="sendOtpCheck">Send OTP</button>
+<button type="submit" class="btn btn-primary btn-right btn-1" (click)="Verify(user)" *ngIf="!sendOtpCheck">Save</button>
 </form>
 
 </ion-content>
