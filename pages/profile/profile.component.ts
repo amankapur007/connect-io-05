@@ -3,6 +3,7 @@ import { Platform, Navbar, NavController, NavParams,IonicPage, ToastController }
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { User } from '../../models/user/user.model';
+import data from '../../json/countrycode.json';
 
 @IonicPage({})
 @Component({
@@ -20,13 +21,14 @@ constructor(private navCtrl:NavController, private navParam:NavParams, private a
 
   ionViewDidLoad(){
     const result = this.navParam.get("result");
-    console.log(result);
+    console.log(data);
     this.populateDetails(result);
   }
 
   populateDetails(result){
       if(result){
         this.user.email=result.user.email;
+        this.user.uid=result.user.uid;
       }
   }
 }
