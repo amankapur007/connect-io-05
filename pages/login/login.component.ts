@@ -6,7 +6,7 @@ import { TabsComponent } from '../tabs/tabs.component';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Account } from '../../models/account/account.model';
-
+import file from '../../json/countrycode.json';
 
 @IonicPage({})
 @Component({
@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(private afAuth:AngularFireAuth,private navCtrl:NavController, private navParams:NavParams) { }
 
   ngOnInit() {
+  console.log("Json data : ", JSON.stringify(file));
   }
 
   async login(){
