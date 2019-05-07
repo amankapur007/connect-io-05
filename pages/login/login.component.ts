@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   constructor(private afAuth:AngularFireAuth,private navCtrl:NavController, private navParams:NavParams) { }
 
   ngOnInit() {
-  console.log("Json data : ", JSON.stringify(file));
   }
 
   async login(){
