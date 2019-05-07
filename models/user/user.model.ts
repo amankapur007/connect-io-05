@@ -4,7 +4,7 @@ export interface User{
   name:string;
   avatar:string;
   email:string;
-  phoneNumberCode:number;
+  phoneNumberCode:string;
   phoneNumber:number;
   uid:string;
   otp:string;
