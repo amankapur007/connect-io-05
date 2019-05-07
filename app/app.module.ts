@@ -20,7 +20,6 @@ import { TabsComponent } from '../pages/tabs/tabs.component';
   declarations: [
     MyApp,
   ],
-
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
