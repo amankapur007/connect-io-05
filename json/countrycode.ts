@@ -1,5 +1,6 @@
 //All Country with there code and dial code
-[
+export default{
+  data:[
   {
     "name": "Afghanistan",
     "dial_code": "+93",
@@ -1210,4 +1211,4 @@
     "dial_code": "+263",
     "code": "ZW"
   }
-]
+]}

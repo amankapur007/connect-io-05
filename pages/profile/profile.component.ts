@@ -3,7 +3,7 @@ import { Platform, Navbar, NavController, NavParams,IonicPage, ToastController }
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { User } from '../../models/user/user.model';
-import data from '../../json/countrycode.json';
+import data from '../../json/countrycode';
 
 @IonicPage({})
 @Component({
