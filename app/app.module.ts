@@ -25,7 +25,6 @@ import { TabsComponent } from '../pages/tabs/tabs.component';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(CONFIG.FIREBASE_CONFIG),
     AngularFireAuthModule,
-    
     PageModule
   ],
   bootstrap: [IonicApp],
@@ -34,7 +33,6 @@ import { TabsComponent } from '../pages/tabs/tabs.component';
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SplashScreen,StatusBar
   ]
 })
 export class AppModule {}
