@@ -12,6 +12,7 @@
     "@angular/http": "^7.2.14",
     "@angular/platform-browser": "^7.2.14",
     "@angular/platform-browser-dynamic": "^7.2.14",
+    "@ionic-native/camera": "4",
     "@ionic-native/core": "4",
     "@ionic-native/splash-screen": "4",
     "@ionic-native/status-bar": "4",
